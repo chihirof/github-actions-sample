@@ -1,0 +1,17 @@
+name: Print Log when manual run(require inputs)
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: '名前'
+        required: true
+
+jobs:
+  print_log:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - name: Run a one-line script
+      run: echo "こんにちは　${{ github.event.inputs.name }}"

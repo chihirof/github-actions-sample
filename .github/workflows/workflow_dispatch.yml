@@ -2,10 +2,6 @@ name: Print Log when manual run
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: '名前'
-        required: true
 
 jobs:
   print_log:
@@ -14,4 +10,4 @@ jobs:
     steps:
 
     - name: Run a one-line script
-      run: echo "こんにちは　${{ github.event.inputs.name }}"
+      run: echo "Hello! This was done manually."
